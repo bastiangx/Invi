@@ -9,11 +9,24 @@ the people who want to let us know they're coming or not.
 - Has a simple Form to put your name and email + a submit button
 - Show's the number of people who have RSVP'd already
 - The event name, title, time and location are shown and new events can be added 
-easily (a parser grabs the event details from a JSON file, if not empty, adds it to the html)
-- The RSVP's are stored in a JSON file and can be easily accessed and parsed
-- each RSVP gets a unique ID in json file for enumeration and deletion.
+easily (a parser grabs the event details from a db file, if not empty, adds it to the html)
+- The RSVP's are stored in a db file and can be easily accessed and parsed
+- each RSVP gets a unique ID for enumeration and deletion.
 
 ---
+
+js + simple css frontend
+golang (gin-gonic) Backend
+sqlite3 Database
+Netlify for deployment
+
+---
+
+## events
+
+Two types of events here, A generic event that comes from `rhul-scraper` and a custom event that can be added by the authors (houseparties, etc)
+- the generic event is parsed from a `db` file and displayed on the website (event title, time, location, description)
+- custom events are just added to the database and displayed on the website if needed.
 
 ## Database
 
